@@ -281,12 +281,7 @@ def main():
                         l_r,l_c = row,col
                         print(last_sel)
 
-        if (win_tile.r, win_tile.c) == (3,1):
-            DISPLAYSURF.fill(BLACK)
-            win_label = myfont.render("WINNER", 1, WHITE)
-            DISPLAYSURF.blit(win_label, (400,300))
-            sleep(10)
-            break
+
 
 
         DISPLAYSURF.fill(BLACK)
@@ -300,6 +295,8 @@ def main():
         for num, lab in enumerate((label,sammy_name,darshan_name,sheng_name)):
             DISPLAYSURF.blit(lab,(4*BOXSIZE + 20, 50*num+50))
 
+        pygame.draw.rect(DISPLAYSURF, WHITE, (BOXSIZE,590,2*BOXSIZE,10))
+
         for name,pic in pieces.items():
             pygame.draw.rect(DISPLAYSURF, pic.color, (BOXSIZE*pic.c+BORDER,BOXSIZE*pic.r+BORDER,BOXSIZE*pic.w-2*BORDER,BOXSIZE*pic.h-2*BORDER))
         if last_sel is not None:
@@ -308,6 +305,13 @@ def main():
 
         sleep(.01)
 
+        if (win_tile.r, win_tile.c) == (3,1):
+            DISPLAYSURF.fill(BLACK)
+            win_label = myfont.render("WINNER!!!!!! CHICKEN DINNER HAVE FUN", 1, WHITE)
+            DISPLAYSURF.blit(win_label, (50,300))
+            pygame.display.update()
+            sleep(10)
+            break
 
 main()
 
