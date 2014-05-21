@@ -285,9 +285,10 @@ def main():
             DISPLAYSURF.fill(BLACK)
             win_label = myfont.render("WINNER", 1, WHITE)
             DISPLAYSURF.blit(win_label, (400,300))
+            sleep(10)
             break
 
-            
+
         DISPLAYSURF.fill(BLACK)
 
 
