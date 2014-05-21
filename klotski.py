@@ -284,7 +284,10 @@ def main():
         if (win_tile.r, win_tile.c) == (3,1):
             DISPLAYSURF.fill(BLACK)
             win_label = myfont.render("WINNER", 1, WHITE)
+            DISPLAYSURF.blit(win_label, (400,300))
             break
+
+            
         DISPLAYSURF.fill(BLACK)
 
 
