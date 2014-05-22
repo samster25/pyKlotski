@@ -73,6 +73,9 @@ class Piece:
         if dr and dc:   
             if not isinstance(self, SmallPiece):
                 return False
+
+            if abs(dr) > 1 or abs(dc) > 1:
+                return False
             if not tiles[(self.r+dr,self.c+dc)].is_empty:
                 return False
             if not (tiles[(self.r+dr,self.c)].is_empty or tiles[(self.r,self.c+dc)].is_empty):
