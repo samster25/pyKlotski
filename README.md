@@ -1,6 +1,6 @@
 pyKlotski
 =========
-The goal is to get the large red block to the white bar on the bottum of the window.
+The goal is to get the large red block to the white bar on the bottom of the window.
 Game play consists of mouse clicks only. You select the piece and the slot you want to
 move it to. For the case of the Rectangle and the Big Square you can click any part of the piece 
 and it will register to move the whole piece. The game has a move counter that increments up 
